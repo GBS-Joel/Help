@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Help.DiscoverArticle"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             Background="#FFECECEC" mc:Ignorable="d" Margin="5">
+  <StackPanel>
+    <Label VerticalAlignment="Top" HorizontalAlignment="Left" FontWeight="SemiBold" FontSize="16" 
+           Content="{Binding Title}" Margin="5,0,0,0" Cursor="Hand" MouseUp="Label_MouseRightButtonUp"/>
+    <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" FontWeight="Normal" FontSize="12" 
+               TextWrapping="Wrap" Text="{Binding Preview}"/>
+    <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12"
+               TextWrapping="Wrap" Text="Tag Tag Tag" Margin="0,10,0,0" FontWeight="SemiBold"/>
+    <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Bottom" StrokeThickness="1" Stroke="LightGray" Height="1" 
+               Margin="0,5,5,0" />
+  </StackPanel>
+</UserControl>

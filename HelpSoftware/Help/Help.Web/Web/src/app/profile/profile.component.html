@@ -1,0 +1,22 @@
+<div *ngIf="UserAuth">
+  <p>
+    {{UserAuth}}
+  </p>
+  <p>{{UserAuth.ID_User}}</p>
+  <br>
+  <p>{{UserAuth.Username}}</p>
+  <br>
+  <p>{{UserAuth.Password}}</p>
+  <br>
+  <p>{{UserAuth.Vorname}}</p>
+  <br>
+  <p>{{UserAuth.Nachname}}</p>
+</div>
+
+<div *ngIf="NoUser">
+  <p>Currently you are not logged in</p>
+</div>
+
+<button (click)="createFake()">Launch dialog</button>
+
+<button (click)="auth()">Login with Fake Account</button>

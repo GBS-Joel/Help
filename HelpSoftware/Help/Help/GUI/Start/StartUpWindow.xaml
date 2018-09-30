@@ -1,0 +1,78 @@
+﻿<lib:HelpUserControl
+             x:Class="Help.StartUpWindow"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:local="clr-namespace:Help"
+             xmlns:lib="clr-namespace:Help.Library;assembly=Help.Library"
+             mc:Ignorable="d"
+             Background="White">
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="50*" />
+      <ColumnDefinition Width="50*" />
+    </Grid.ColumnDefinitions>
+    <Grid Grid.Column="0">
+      <Label VerticalAlignment="Top" HorizontalAlignment="Center" Margin="24" Content="{lib:TextTranslator Text='Suchen'}" FontSize="30" />
+      <TextBox x:Name="tbSearch" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="{lib:TextTranslator Text='Suchbegriff'}" Width="750" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="20" VerticalContentAlignment="Stretch" Margin="24,100,0,24" />
+      <Button x:Name="btnSearch" Controls:ControlsHelper.ContentCharacterCasing="Normal"  Width="120" Height="40" VerticalAlignment="Top" HorizontalAlignment="Right" Content="Suchen" Margin="820,100,0,24" FontSize="20" Click="btnSearch_Click" />
+      <Expander x:Name="exAdvancedSearch" Margin="24,200,0,0" VerticalAlignment="Top" Header="{lib:TextTranslator Text='Erweiterte Suche'}">
+        <Expander.HeaderTemplate>
+          <DataTemplate>
+            <Label Height="50" Content="Adcanced Search" HorizontalAlignment="Center" VerticalContentAlignment="Center"  FontSize="30" />
+          </DataTemplate>
+        </Expander.HeaderTemplate>
+        <Grid>
+          <Label VerticalAlignment="Top" HorizontalAlignment="Left" Margin="24,24,0,0" Content="Tags:" FontSize="20" Width="100" />
+          <TextBox VerticalAlignment="Top" HorizontalAlignment="Left" Margin="200,24,0,0" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Tag" Width="570" Height="40" FontSize="20" />
+          <Label VerticalAlignment="Top" HorizontalAlignment="Left" Margin="24,94,0,0" Content="Author:" FontSize="20" />
+          <Controls:SplitButton VerticalAlignment="Top" HorizontalAlignment="Left" Margin="200,94,0,0" Height="40" FontSize="20" Width="570" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" ItemsSource="{Binding Users}" />
+          <Label VerticalAlignment="Top" HorizontalAlignment="Left" Margin="24,164,0,0" Content="Created:" FontSize="20" />
+          <Controls:DateTimePicker FontSize="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="570" Margin="200,164,0,0" Height="40" />
+          <Label VerticalAlignment="Top" HorizontalAlignment="Left" Margin="24,234,0,0" Content="Last Changed:" FontSize="20" />
+          <Controls:DateTimePicker VerticalAlignment="Top" HorizontalAlignment="Left" Width="570" Margin="200,234,0,0" Height="40" />
+          <Label VerticalAlignment="Top" HorizontalAlignment="Left" Margin="24,304,0,0" Content="Views" FontSize="20" />
+          <Slider VerticalAlignment="Top" HorizontalAlignment="Left" Margin="200,304,0,0" Height="40" VerticalContentAlignment="Center" Style="{DynamicResource FlatSlider}" Width="570" />
+          <Button Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Search" Margin="670,374,0,0" x:Name="advancdedSearch" Click="advancdedSearch_Click" />
+        </Grid>
+      </Expander>
+      <Label VerticalAlignment="Top" HorizontalAlignment="Left" Margin="24,700,0,0" Content="Actions" FontSize="30" />
+      <Controls:Tile VerticalAlignment="Top" Content="Create Entry" HorizontalAlignment="Left" Margin="24,750,0,0" Width="200" Height="200" Click="Tile_Click" />
+      <Controls:Tile x:Name="btnCreateTags" VerticalAlignment="Top" Content="Do Other Action" HorizontalAlignment="Left" Margin="254,750,0,0" Width="200" Height="200" Click="btnCreateTags_Click" />
+    </Grid>
+    <Grid Grid.Column="1">
+      <Controls:MetroAnimatedTabControl VerticalAlignment="Top" Margin="24,30,24,24" HorizontalAlignment="Center" Controls:TabControlHelper.Underlined="SelectedTabItem" Controls:TabControlHelper.Transition="LeftReplace">
+        <Controls:MetroAnimatedTabControl.Resources>
+          <Style TargetType="{x:Type TabPanel}">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+          </Style>
+        </Controls:MetroAnimatedTabControl.Resources>
+        <Controls:MetroTabItem Header="Newest" Width="100" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalContentAlignment="Center">
+          <Grid>
+            <ListBox x:Name="lbboxNew" ScrollViewer.VerticalScrollBarVisibility="Hidden" ScrollViewer.HorizontalScrollBarVisibility="Hidden" VerticalAlignment="Stretch" HorizontalAlignment="Center" Width="800" Margin="0,24,0,55" BorderBrush="Black" BorderThickness="1" MouseDoubleClick="lboxTop_MouseDoubleClick_1" />
+            <Button x:Name="ScrolltoBottom" VerticalAlignment="Bottom" HorizontalAlignment="Center" Click="ScrolltoBottom_Click" Width="50" Height="50"  Style="{DynamicResource MetroCircleButtonStyle}">
+              <Rectangle Width="30"
+                Height="30"
+                Fill="{Binding Path=Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Button}}}">
+                <Rectangle.OpacityMask>
+                  <VisualBrush Stretch="Fill" Visual="{DynamicResource appbar_arrow_down}" />
+                </Rectangle.OpacityMask>
+              </Rectangle>
+            </Button>
+          </Grid>
+        </Controls:MetroTabItem>
+        <Controls:MetroTabItem x:Name="mtiRecView" Header="Recently Viewed" HorizontalAlignment="Center" VerticalAlignment="Center">
+          <Grid>
+            <!--<Label x:Name="lblTitleLabel" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="30" Content="Recently Viewed" FontSize="30" />-->
+            <ListBox x:Name="lboxTop" VerticalAlignment="Stretch" HorizontalAlignment="Center" Width="800" Margin="0,24,0,24" BorderBrush="Black" BorderThickness="1" MouseDoubleClick="lboxTop_MouseDoubleClick_1" />
+          </Grid>
+        </Controls:MetroTabItem>
+        <Controls:MetroTabItem Header="Rec Viewed">
+          <ListBox x:Name="lboxRecView" VerticalAlignment="Stretch" HorizontalAlignment="Center" Width="800" Margin="0,24,0,24" BorderBrush="Black" BorderThickness="1" />
+        </Controls:MetroTabItem>
+      </Controls:MetroAnimatedTabControl>
+    </Grid>
+  </Grid>
+</lib:HelpUserControl>

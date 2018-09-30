@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="Help.ReportWrongTranslation"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:local="clr-namespace:Help"
+             mc:Ignorable="d">
+  <Grid>
+    <Label VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="30" Content="Falsche übersetzung Melden" />
+    <TextBox x:Name="tbWrongText" VerticalAlignment="Top" HorizontalAlignment="Stretch" Controls:TextBoxHelper.Watermark="Alter Wert" Margin="24,80,24,24" FontSize="16" Height="30" />
+    <TextBox AcceptsReturn="False" TextWrapping="Wrap" x:Name="tbNewText" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="30" Margin="24,150,24,24" FontSize="16" Controls:TextBoxHelper.Watermark="Neuer Wert" />
+    <TextBox AcceptsReturn="True" TextWrapping="Wrap" x:Name="tbDescription" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="150" Margin="24,220,24,24" FontSize="16" Controls:TextBoxHelper.Watermark="Beschreibung" />
+    <Button IsDefault="True" Width="150" Height="40" VerticalAlignment="Top" HorizontalAlignment="Right" Content="Send Report" Controls:ControlsHelper.ContentCharacterCasing="Normal" Margin="24,460,24,24" Style="{StaticResource AccentedSquareButtonStyle}" FontSize="20" x:Name="btnSendReport" Click="btnSendReport_Click" />
+  </Grid>
+</UserControl>

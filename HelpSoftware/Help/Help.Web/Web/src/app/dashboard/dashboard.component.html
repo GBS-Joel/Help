@@ -1,0 +1,9 @@
+<h3>DashBoard</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let user of users" class="col-1-4">
+    <div class="module user">
+      <h4>{{user.Username}}</h4>
+    </div>
+  </a>
+</div>
+<button (click)="goBack()">go back</button>

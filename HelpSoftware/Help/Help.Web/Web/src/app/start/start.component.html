@@ -1,0 +1,35 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav opened mode="side">
+    <br>
+    <form (ngSubmit)="Search(search)">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Suche" name="search" [(ngModel)]="search">
+        <br>
+      </mat-form-field>
+    </form>
+
+    <p> DashBoard</p>
+  </mat-sidenav>
+  <br>
+  <div *ngFor="let item of Articles" id="lst">
+    <mat-card id="Test">
+      <mat-card-header>
+        {{item.ArticleTitle}}
+      </mat-card-header>
+      <br>
+      <mat-card-subtitle>
+        {{item.ArticlePreview}}
+      </mat-card-subtitle>
+      <mat-card-content>
+        {{item.ArticleText}}
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button (click)="View(item)">View</button>
+        <button mat-button (click)="Comment(item)">Comment</button>
+        <button mat-button>SHARE</button>
+      </mat-card-actions>
+    </mat-card>
+    <br>
+  </div>
+  <br>
+</mat-sidenav-container>

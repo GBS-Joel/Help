@@ -1,0 +1,15 @@
+<div class="app-body" (window:resize)="onResize($event)">
+  <mat-toolbar color="primary">
+    <button mat-button color="white" [routerLink]="['/home']">Home</button>
+    <button mat-button color="white" [routerLink]="['/dashboard']">Dashboard</button>
+    <button mat-button color="white" [routerLink]="['/start']">Start</button>
+    <span class="example-fill-remaining-space"></span>
+    <button mat-button color="white" [routerLink]="['/reportbug']">
+      <i class="material-icons">bug_report</i>
+    </button>
+    <button mat-button color="white" [routerLink]="['/login']" *ngIf="!isLoggedIn">Login</button>
+    <button mat-button color="white" [routerLink]="['/profile']" *ngIf="isLoggedIn">Profile</button>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+  <app-messages></app-messages>
+</div>

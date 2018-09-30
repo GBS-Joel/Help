@@ -1,0 +1,12 @@
+﻿<ListBoxItem x:Class="Help.DashBoardListBoxItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:ico="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             mc:Ignorable="d" Background="{DynamicResource MaterialDesignPaper}" Style="{StaticResource MaterialDesignToolToggleListBoxItem}" MinHeight="40" Height="40">
+  <WrapPanel FlowDirection="LeftToRight" >
+    <ico:PackIconFontAwesome Kind="LockSolid" Width="20" Height="20" Margin="0,0,0,0" VerticalAlignment="Center" x:Name="icon" Foreground="DarkOrange"/>
+    <Label VerticalAlignment="Top" HorizontalAlignment="Left" Height="40" FontSize="16" Margin="10,0,0,0" Content="{Binding ElementTitle}"/>
+  </WrapPanel>
+</ListBoxItem>

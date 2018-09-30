@@ -1,0 +1,22 @@
+﻿<Controls:MetroWindow
+        x:Class="Help.ChatWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Help"
+        mc:Ignorable="d"
+  Loaded="MetroWindow_Loaded"
+        Title="ChatWindow">
+  <DockPanel>
+    <ListBox x:Name="tbPreview" SelectionChanged="tbPreview_SelectionChanged" DockPanel.Dock="Left" Width="200" HorizontalAlignment="Left" BorderBrush="Black" BorderThickness="2" />
+    <Canvas DockPanel.Dock="Top" Height="100" VerticalAlignment="Top">
+      <Image Width="20" Height="20" HorizontalAlignment="Left" />
+      <TextBox VerticalAlignment="Center" Text="test" />
+      <Button Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Click="Button_Click" />
+    </Canvas>
+    <TextBox VerticalAlignment="Bottom" DockPanel.Dock="Bottom" Height="50" Margin="10,0,0,0" />
+    <Canvas DockPanel.Dock="Right" Background="Red" />
+  </DockPanel>
+</Controls:MetroWindow>

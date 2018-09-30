@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Help.Library">
+  <BitmapImage x:Key="Black_48x48_Delete" UriSource="/Black/48x48/Delete" />
+  <BitmapImage x:Key="Black_36x36_Delete" UriSource="/Black/36x36/Delete" />
+  <BitmapImage x:Key="Black_24x24_Delete" UriSource="/Black/36x36/Delete" />
+  <BitmapImage x:Key="Black_18x18_Delete" UriSource="/Black/36x36/Delete" />
+</ResourceDictionary>

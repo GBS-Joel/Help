@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EC9CF38F-9AA4-484F-903E-202A12D6B31F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Help</RootNamespace>
+    <AssemblyName>Help</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ControlzEx, Version=3.0.2.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\ControlzEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro, Version=1.6.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.6.2\lib\net45\MahApps.Metro.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MahApps.Metro.IconPacks, Version=2.2.0.12, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.IconPacks.2.2.0\lib\net45\MahApps.Metro.IconPacks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Markdig, Version=0.14.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Markdig.0.14.7\lib\net40\Markdig.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Markdig.Wpf, Version=0.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Markdig.Wpf.0.2.3\lib\net45\Markdig.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Markout.Common, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Markout.Input.1.3.0\lib\net40\Markout.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Markout.Input, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Markout.Input.1.3.0\lib\net40\Markout.Input.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignExtensions, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignExtensions.2.0.1\lib\net45\MaterialDesignExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.4.0.1044, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.4.0.1044\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\ControlzEx.3.0.2.4\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Classes\MyXamlSchemaContext.cs" />
+    <Compile Include="Classes\MailTemplates.cs" />
+    <Compile Include="Controls\TopicListBoxItem.xaml.cs">
+      <DependentUpon>TopicListBoxItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EF\ArticleNomination.cs" />
+    <Compile Include="EF\ArticleNote.cs" />
+    <Compile Include="EF\ArticleProposal.cs" />
+    <Compile Include="EF\BugReport.cs" />
+    <Compile Include="EF\MailActivity.cs" />
+    <Compile Include="EF\Note.cs" />
+    <Compile Include="EF\ReviewedArticle.cs" />
+    <Compile Include="EF\SearchHistory.cs" />
+    <Compile Include="EF\SystemSetting.cs" />
+    <Compile Include="Enum\ApplicationThemes.cs" />
+    <Compile Include="Classes\AppContext.cs" />
+    <Compile Include="Classes\Client.cs" />
+    <Compile Include="Controls\ActivityListBoxItem.xaml.cs">
+      <DependentUpon>ActivityListBoxItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ArticleListBoxItem.xaml.cs">
+      <DependentUpon>ArticleListBoxItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CommentListBoxItem.xaml.cs">
+      <DependentUpon>CommentListBoxItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TagListBoxItem.xaml.cs">
+      <DependentUpon>TagListBoxItem.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Activity.cs" />
+    <Compile Include="EF\ActivityAction.cs" />
+    <Compile Include="EF\ArticleComment.cs" />
+    <Compile Include="EF\ArticleTag.cs" />
+    <Compile Include="EF\LoginHistory.cs" />
+    <Compile Include="EF\Setting.cs" />
+    <Compile Include="EF\UserFavedArticles.cs" />
+    <Compile Include="EF\UserLikedArticel.cs" />
+    <Compile Include="EF\UserSetting.cs" />
+    <Compile Include="EF\UserWatchArticle.cs" />
+    <Compile Include="Enum\EMailType.cs" />
+    <Compile Include="Enum\Notes.cs" />
+    <Compile Include="Enum\SettingName.cs" />
+    <Compile Include="Enum\SystemSettings.cs" />
+    <Compile Include="GUI\Article\ArticleComments.xaml.cs">
+      <DependentUpon>ArticleComments.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Article\ArticleDetail.xaml.cs">
+      <DependentUpon>ArticleDetail.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Article\ArticlePreview.xaml.cs">
+      <DependentUpon>ArticlePreview.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Article\ArticleSearchResult.xaml.cs">
+      <DependentUpon>ArticleSearchResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Article\CreateArticle.xaml.cs">
+      <DependentUpon>CreateArticle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Topic.cs" />
+    <Compile Include="EF\ViewHistory.cs" />
+    <Compile Include="GUI\Article\ProposeArticle.xaml.cs">
+      <DependentUpon>ProposeArticle.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Article\PushUser.xaml.cs">
+      <DependentUpon>PushUser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Article\WriteArticleText.xaml.cs">
+      <DependentUpon>WriteArticleText.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Article\CommentWindow.xaml.cs">
+      <DependentUpon>CommentWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Flyout\UserFlyout.xaml.cs">
+      <DependentUpon>UserFlyout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Registration\Registration.xaml.cs">
+      <DependentUpon>Registration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Tag\ShowTag.xaml.cs">
+      <DependentUpon>ShowTag.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Topic\ShowTopic.xaml.cs">
+      <DependentUpon>ShowTopic.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\User\UserProfileOther.xaml.cs">
+      <DependentUpon>UserProfileOther.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\User\UserProfileOwn.xaml.cs">
+      <DependentUpon>UserProfileOwn.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\ErrorHandler.cs" />
+    <Compile Include="Handler\MailHandler.cs" />
+    <Compile Include="Handler\MailPW.cs" />
+    <Compile Include="Handler\NoteHelper.cs" />
+    <Compile Include="Handler\SettingsHandler.cs" />
+    <Compile Include="Handler\WindowHandler.cs" />
+    <Compile Include="StartUpWindow.xaml.cs">
+      <DependentUpon>StartUpWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Controls\ActivityListBoxItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ArticleListBoxItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\CommentListBoxItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TagListBoxItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TopicListBoxItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Article\ArticleComments.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Article\ArticleDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Article\ArticlePreview.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Article\ArticleSearchResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Article\CreateArticle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Article\ProposeArticle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Article\PushUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Article\WriteArticleText.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Article\CommentWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Flyout\UserFlyout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Topic\ShowTopic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\User\UserProfileOther.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\User\UserProfileOwn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Connection\Connection.cs" />
+    <Compile Include="EF\Article.cs" />
+    <Compile Include="EF\HelpContext.cs" />
+    <Compile Include="EF\Tag.cs" />
+    <Compile Include="EF\User.cs" />
+    <Compile Include="Classes\HashGenerator.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="GUI\Registration\Registration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\IconsNonShared.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Tag\ShowTag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StartUpWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Resource Include="Resources\Entypo.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WindowsIcons-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Entypo-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\heart_checked.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\heart_unchecked.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\star_checked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\star_unchecked.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\unwatched.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\watched.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\comment.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

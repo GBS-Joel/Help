@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="Help.UserFlyout"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+             Background="{DynamicResource MaterialDesignPaper}"
+             mc:Ignorable="d">
+  <Grid>
+    <TextBox HorizontalAlignment="Stretch" VerticalAlignment="Top" x:Name="tbTitle" Controls:TextBoxHelper.Watermark="Title" Margin="24,10,24,24" FontSize="20" />
+    <TextBox AcceptsReturn="True" TextWrapping="Wrap" x:Name="Description" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="150" Margin="24,60,24,24" FontSize="16" Controls:TextBoxHelper.Watermark="Bug Description" />
+    <TextBox AcceptsReturn="True" TextWrapping="Wrap" x:Name="tbErrorCode" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="150" Margin="24,230,24,24" FontSize="16" Controls:TextBoxHelper.Watermark="Error Code / Stacktrace" />
+    <Button Width="150" Height="40" VerticalAlignment="Top" HorizontalAlignment="Right" Content="Send Report" 
+                        Controls:ControlsHelper.ContentCharacterCasing="Normal" Margin="24,400,24,24" Style="{StaticResource AccentedSquareButtonStyle}" 
+                        FontSize="20" x:Name="btnSendReport" Click="btnSendReport_Click" />
+  </Grid>
+</UserControl>

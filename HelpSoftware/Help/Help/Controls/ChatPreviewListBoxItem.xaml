@@ -1,0 +1,12 @@
+﻿<ListBoxItem x:Class="Help.ChatPreviewListBoxItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Help"
+             mc:Ignorable="d" MinHeight="50" Width="197">
+  <WrapPanel>
+    <Image Margin="10" Width="40" Height="40" />
+    <TextBlock x:Name="tbrec" Margin="10"  VerticalAlignment="Center" FontSize="16" />
+  </WrapPanel>
+</ListBoxItem>

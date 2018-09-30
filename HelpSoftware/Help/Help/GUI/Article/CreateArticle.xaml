@@ -1,0 +1,33 @@
+﻿<lib:HelpUserControl
+        x:Class="Help.CreateArticle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Help"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:lib="clr-namespace:Help.Library;assembly=Help.Library"
+        xmlns:libc="clr-namespace:Help.Library.Controls;assembly=Help.Library"
+        xmlns:mark="clr-namespace:Markdig.Renderers;assembly=Markdig"
+        mc:Ignorable="d"
+        Width="1920"
+        Height="1200"
+        Title="CreateArticle">
+  <Grid>
+    <TextBox x:Name="tbTitle" VerticalAlignment="Top" Margin="100,24,0,0" HorizontalAlignment="Left" Width="1300" HorizontalContentAlignment="Left" Height="50" FontSize="30" Controls:TextBoxHelper.Watermark="Title" Controls:TextBoxHelper.ClearTextButton="True" />
+    <WrapPanel>
+      <Label VerticalAlignment="Top" HorizontalAlignment="Left" Content="Tags" Margin="100,140,0,0" FontSize="20"/>
+      <lib:HelpCheckComboBox AffectIsSaveState="True" VerticalAlignment="Top" HorizontalAlignment="Left" x:Name="test"
+                       Width="500" Margin="200,140,0,0" Height="40" FontSize="20" />
+      <Label VerticalAlignment="Top" HorizontalAlignment="Left" Content="Tags" Margin="100,140,0,0" FontSize="20"/>
+      <lib:HelpCheckComboBox AffectIsSaveState="True" VerticalAlignment="Top" HorizontalAlignment="Left" x:Name="test1"
+                       Width="500" Margin="200,140,0,0" Height="40" FontSize="20" />
+    </WrapPanel>
+    <!--IsPublic-->
+    <!--Team only or organization onyl or public-->
+    <!--<TextBox TextWrapping="Wrap" x:Name="tbArticleText" AcceptsReturn="True" AcceptsTab="True" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,230,0,0" Height="800" Width="1600" />-->
+    <!--<Button x:Name="btnPreview" IsDefault="True" Width="120" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Right" Content="Preview" Controls:ControlsHelper.ContentCharacterCasing="Normal" Margin="820,100,300,24" FontSize="20" Click="btnPreview_Click" />
+    <Button x:Name="btnSave" IsDefault="True" Width="120" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Right" Content="Preview" Controls:ControlsHelper.ContentCharacterCasing="Normal" Margin="820,100,100,24" FontSize="20" Click="btnSave_Click" />-->
+    <Button x:Name="btnNext" IsDefault="True" Width="120" Height="40" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Preview" Controls:ControlsHelper.ContentCharacterCasing="Normal" FontSize="20" Click="btnNext_Click" />
+  </Grid>
+</lib:HelpUserControl>

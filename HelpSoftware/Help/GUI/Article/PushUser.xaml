@@ -1,0 +1,33 @@
+﻿<Controls:MetroWindow
+        x:Class="Help.PushUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:local="clr-namespace:Help"
+        mc:Ignorable="d"
+        Width="1920"
+        Loaded="MetroWindow_Loaded"
+        Height="1200"
+        Title="PushUser">
+  <Grid>
+    <Label VerticalAlignment="Top" HorizontalAlignment="Left" Margin="24,10,0,0" Content="Create A New Article" FontSize="30"/>
+    <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" Margin="24,100,0,0" FontSize="16" Text="Is there an Article Missing. Or do you don't find the article you are Searching for Do you Want to create the Article?"/>
+    <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" Margin="24,130,0,0" FontSize="16" Text="But you don't understand the Subject But You Know Somebody who could know the Subject and Write the Article." />
+    <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" Margin="24,160,0,0" FontSize="16" Text="Tag him here and we will notify him and notfiy you when he creates the Article, We will also Notify him aswll :)" />
+    <Label VerticalAlignment="Top" HorizontalAlignment="Left" Margin="24,220,0,0" FontSize="20" Content="User:" />
+    <ComboBox x:Name="cbUsers" VerticalAlignment="Top" Height="30" HorizontalAlignment="Left" Margin="300,220,0,0" Width="500"/>
+    <Label VerticalAlignment="Top" HorizontalAlignment="Left" Margin="24,300,0,0" FontSize="20" Content="Article Title:" />
+    <TextBox x:Name="tbArticleTitle" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="300,300,0,0" FontSize="20" Width="500" />
+    <Label VerticalAlignment="Top" HorizontalAlignment="Left" Margin="24,380,0,0" FontSize="20" Content="Article Description:" />
+    <TextBox x:Name="tbArtDesc" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="300, 380,0,0" FontSize="20" AcceptsReturn="True" AcceptsTab="True" VerticalContentAlignment="Top" Height="150" Width="500" />
+    <Label VerticalAlignment="Top" HorizontalAlignment="Left" Margin="24,570,0,0" FontSize="20" Content="Comment" />
+    <TextBox x:Name="Comment" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="300, 570,0,0" FontSize="20" AcceptsReturn="True" AcceptsTab="True" VerticalContentAlignment="Top" Height="150" Width="500" />
+    <Label VerticalAlignment="Top" HorizontalAlignment="Left" Margin="24,750,0,0" FontSize="20" Content="Topic" />
+    <TextBox x:Name="Topic" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="300,750,0,0" FontSize="20" Width="500" />
+    <Label VerticalAlignment="Top" HorizontalAlignment="Left" Margin="24,830,0,0" FontSize="20" Content="Tags:" />
+    <TextBox x:Name="Tags" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="300,830,0,0" FontSize="20" Width="500" />
+    <Button IsDefault="True" Width="120" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Right" Content="Save" Controls:ControlsHelper.ContentCharacterCasing="Normal" Margin="820,100,800,24" Style="{StaticResource AccentedSquareButtonStyle}" FontSize="20" Click="Button_Click" />
+  </Grid>
+</Controls:MetroWindow>

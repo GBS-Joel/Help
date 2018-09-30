@@ -1,0 +1,11 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Help">
+
+  <BitmapImage x:Key="account_24x24" UriSource="24x24/account.png" />
+  <BitmapImage x:Key="heart_unchecked" UriSource="24x24/heart_unchecked.png" />
+  <BitmapImage x:Key="comment" UriSource="24x24/comment.png" />
+  <BitmapImage x:Key="watched" UriSource="24x24/watched.png" />
+  <BitmapImage x:Key="star_unchecked" UriSource="24x24/star_unchecked.png" />
+  <BitmapImage x:Key="start_checked_24x24" UriSource="24x24/star_checked.png" />
+ </ResourceDictionary>

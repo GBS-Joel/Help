@@ -1,0 +1,27 @@
+﻿<mah:MetroWindow
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        x:Class="Help.Light.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Help.Light"
+        mc:Ignorable="d"
+        FontFamily="Tahoma"
+        Height="500" Width="1000" MinWidth="1000" MinHeight="500">
+  <mah:MetroWindow.RightWindowCommands>
+    <mah:WindowCommands Opacity="1">
+      <StackPanel Orientation="Horizontal">
+        <Button x:Name="btnSettings"
+                    Margin="4"
+                    VerticalAlignment="Center"
+                    Visibility="Visible"
+                    Content="Settings"
+                Click="btnSettings_Click" />
+      </StackPanel>
+    </mah:WindowCommands>
+  </mah:MetroWindow.RightWindowCommands>
+  <Grid>
+    <FlowDocumentScrollViewer BorderBrush="Black" BorderThickness="2" x:Name="Viewer" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" />
+  </Grid>
+</mah:MetroWindow>

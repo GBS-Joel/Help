@@ -1,0 +1,97 @@
+﻿<Controls:MetroWindow 
+        x:Class="Help.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:local="clr-namespace:Help"
+        RightWindowCommandsOverlayBehavior="Always"
+        WindowStartupLocation="CenterOwner"
+        WindowState="Maximized"
+        Icon="/Resources/Icon/faviconDark.ico"
+        Width="1920"
+        Height="1200"
+        MinWidth="1000"
+        MinHeight="500"
+        mc:Ignorable="d"
+        Title="Help">
+  <Window.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Resources/Icons.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Window.Resources>
+  <Window.TaskbarItemInfo>
+    <TaskbarItemInfo>
+      <TaskbarItemInfo.ThumbButtonInfos>
+        <ThumbButtonInfoCollection>
+          <ThumbButtonInfo
+                    DismissWhenClicked="False"
+                    Command="MediaCommands.Play"
+                    Description="Play"/>
+          <ThumbButtonInfo
+                    DismissWhenClicked="True"
+                    Description="Stop" />
+        </ThumbButtonInfoCollection>
+      </TaskbarItemInfo.ThumbButtonInfos>
+    </TaskbarItemInfo>
+  </Window.TaskbarItemInfo>
+  <Controls:MetroWindow.RightWindowCommands>
+    <Controls:WindowCommands Opacity="1">
+      <StackPanel Orientation="Horizontal">
+        <Button x:Name="btnProposeArticle"
+                    Margin="4"
+                    VerticalAlignment="Center"
+                    Content="Propose Article"
+                    Foreground="White"
+                    Visibility="Visible"
+                    Click="btnProposeArticle_Click"/>
+        <Button   x:Name="btnCreateNewEntry"
+                    Margin="4 0 0 0"
+                    VerticalAlignment="Center"
+                    Content="Create New Entry"
+                    Foreground="White"
+                    Visibility="Collapsed"
+                    Click="btnCreateNewEntry_Click"/>
+        <Button x:Name="btnLogin"
+                  Margin="4,0,0,0"
+                  VerticalAlignment="Center"
+                  Content="Login"
+                  Foreground="White"
+                  Click="btnLogin_Click" />
+        <Button x:Name="btnRegister"
+                  Margin="4,0,0,0"
+                  VerticalAlignment="Center"
+                  Content="Register"
+                  Foreground="White"
+                  Click="btnRegister_Click" />
+        <Button x:Name="btnAccount"
+                  Margin="4,0,0,0"
+                  Content="Acount"
+                  Foreground="White"
+                  Visibility="Collapsed"
+                  Opacity="1"
+                  Click="btnAccount_Click"/>
+        <Button x:Name="btnInfo"
+                  Margin="4,0,0,0"
+                  VerticalAlignment="Center"
+                  Content="Report A Bug"
+                  Foreground="White"
+                  Click="btnInfo_Click" />
+      </StackPanel>
+    </Controls:WindowCommands>
+  </Controls:MetroWindow.RightWindowCommands>
+  <Controls:MetroWindow.Flyouts>
+    <Controls:FlyoutsControl>
+      <Controls:Flyout Header="Settings" Position="Right" Width="700" x:Name="flyout" 
+                       AnimateOnPositionChange="True" AreAnimationsEnabled="True" AnimateOpacity="True"
+                       IsModal="True" Theme="Adapt" IsOpenChanged="flyout_IsOpenChanged">
+        <ContentPresenter x:Name="contentflyout" />
+      </Controls:Flyout>
+    </Controls:FlyoutsControl>
+  </Controls:MetroWindow.Flyouts>
+  <ContentPresenter x:Name="ContentP"/>
+</Controls:MetroWindow>

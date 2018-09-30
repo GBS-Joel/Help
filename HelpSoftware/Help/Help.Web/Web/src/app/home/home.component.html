@@ -1,0 +1,30 @@
+<div *ngIf="test">
+  <p>
+    {{test}}
+  </p>
+  <p>{{test.ID_User}}</p>
+  <p>{{test.Username}}</p>
+
+  <div>
+    <label>name:
+      <input [(ngModel)]="test.Username" placeholder="name">
+    </label>
+  </div>
+
+  <h2>My DATA</h2>
+  <ul class="users">
+    <li *ngFor="let user of users" (click)="onSelect(user)" [class.selected]="user === test">
+      <span class="badge">{{user.ID_User}}</span> {{user.Username}}
+    </li>
+  </ul>
+
+
+
+
+  <h2>Arts</h2>
+  <ul class="users">
+    <li *ngFor="let art of Articles" (click)="onSelectArt(art)" [class.selected]="art === selectedArticle">
+      <span class="badge">{{art.ArticleText}}</span> {{art.ArticlePreview}}
+    </li>
+  </ul>
+</div>

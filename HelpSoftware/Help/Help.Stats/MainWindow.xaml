@@ -1,0 +1,15 @@
+﻿<Window x:Class="Help.Stats.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Help.Stats"
+        mc:Ignorable="d"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        Title="MainWindow"
+        Background="#ECECEC" d:DataContext="{d:DesignInstance  local:MainWindow}" MinWidth="50" MinHeight="50">
+  <Grid>
+    <lvc:Gauge Grid.Row="0" Grid.Column="0" Margin="5" x:Name="test" UseLayoutRounding="False"
+                   Uses360Mode="False" From="0" To="100" Value="50" />
+  </Grid>
+</Window>

@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="Help.Library.ModuleListBoxItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Help.Library"
+             mc:Ignorable="d" Width="200" Background="blue">
+  <Grid>
+    <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" Margin="5" Text="Beispiel" FontSize="20" FontStyle="Normal" x:Name="name" Background="Green" />
+  </Grid>
+</UserControl>

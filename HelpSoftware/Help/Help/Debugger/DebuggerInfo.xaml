@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Help.Debugger.DebuggerInfo"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Help.Debugger"
+             mc:Ignorable="d"
+             Background="White">
+  <WrapPanel>
+    <Label VerticalAlignment="Top" HorizontalAlignment="Left"   Content="Connectionstring" />
+    <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" Text="{Binding ClientInfo.ConnectionString}" Width="300" Height="30" />
+    <Label VerticalAlignment="Top" HorizontalAlignment="Left" Content="Exection Path" />
+    <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" Text="{Binding ClientInfo.ExecutionPath}" Width="300" Height="30" />
+    <Label VerticalAlignment="Top" HorizontalAlignment="Left" Content="StartupInfos" />
+    <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" Text="{Binding ClientInfo.StartupInfos}" Width="300" Height="30" />
+    <Label VerticalAlignment="Top" HorizontalAlignment="Left" Content="Operating System" />
+    <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" Text="{Binding ClientInfo.OperatingSystem}" Width="300" Height="30" />
+    <Label VerticalAlignment="Top" HorizontalAlignment="Left" Content="UserName" />
+    <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" Text="{Binding ClientInfo.UserName}" Width="300" Height="30" />
+    <Label VerticalAlignment="Top" HorizontalAlignment="Left" Content="Thread ID" />
+    <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" Text="{Binding ClientInfo.CurrentManagedThreadId}" Width="300" Height="30" />
+    <Button Click="Button_Click" Width="100" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Left" Content="Reload Settings" />
+  </WrapPanel>
+</UserControl>

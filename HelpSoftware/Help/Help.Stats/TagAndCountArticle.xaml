@@ -1,0 +1,13 @@
+﻿<Window x:Class="Help.Stats.TagAndCountArticle"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Help.Stats"
+        mc:Ignorable="d"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        Title="TagAndCountArticle" Height="300" Width="300" d:DataContext="{d:DesignInstance  local:TagAndCountArticle}">
+  <Grid>
+    <lvc:PieChart LegendLocation="Right" DataClick="Chart_OnDataClick" Hoverable="True" DataTooltip="{x:Null}" x:Name="test" />
+  </Grid>
+</Window>

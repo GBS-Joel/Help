@@ -1,0 +1,19 @@
+﻿<Window x:Class="Help.Library.ErrorMessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        WindowChrome.ResizeGripDirection="None"
+        WindowStyle="ToolWindow"
+        Title="Fehler"
+        Height="470" Width="800">
+  <Grid Background="AliceBlue">
+    <TextBlock VerticalAlignment="Top" HorizontalAlignment="Left" Text="{Binding TitleError}" FontWeight="Black" FontSize="14" Margin="24,10,100,10" TextWrapping="Wrap" />
+    <TextBox IsReadOnly="True" Background="White" Controls:ScrollViewerHelper.VerticalScrollBarOnLeftSide="True" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20,60,0,0" Width="750" Height="300" Text="{Binding InnerMessage}" />
+    <Button Controls:ControlsHelper.MouseOverBorderBrush="Red" Controls:ButtonHelper.PreserveTextCase="True" Style="{StaticResource AccentedSquareButtonStyle}" Content="OK" Width="100" Height="40" Margin="20,40,14,20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Button_Click" />
+    <Button Controls:ButtonHelper.PreserveTextCase="True" Style="{StaticResource AccentedSquareButtonStyle}" Content="Copy To Clipboard" Width="130" Height="40" Margin="80,10,150,20" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Button_Click_1" />
+  </Grid>
+</Window>

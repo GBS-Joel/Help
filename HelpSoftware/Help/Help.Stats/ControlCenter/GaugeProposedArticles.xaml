@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Help.Stats.GaugeProposedArticles"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+             xmlns:local="clr-namespace:Help.Stats"
+             mc:Ignorable="d"
+             MinWidth="170" MinHeight="170">
+  <Grid>
+    <lvc:AngularGauge FromValue="0" ToValue="100" Value="{Binding Value}"  x:Name="test"
+                          LabelsStep="20" TicksStep="10" Wedge="250"
+                          TicksForeground="White" Foreground="White"
+                          FontWeight="Bold" FontSize="16"
+                          SectionsInnerRadius=".5">
+      <lvc:AngularGauge.Sections>
+        <lvc:AngularSection FromValue="0" ToValue="20" Fill="Green" />
+        <lvc:AngularSection FromValue="20" ToValue="80" Fill="#F8A725" />
+        <lvc:AngularSection FromValue="80" ToValue="100" Fill="#FF3939" />
+      </lvc:AngularGauge.Sections>
+    </lvc:AngularGauge>
+  </Grid>
+</UserControl>
