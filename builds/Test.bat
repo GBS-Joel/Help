@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\MSTest.exe" /testcontainer:C:\Users\joel.marty\Documents\GitHub\Help\HelpSoftware\Help\Help.Test\bin\Debug\Help.Test.dll /nologo /noresults
