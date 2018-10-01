@@ -1,5 +1,4 @@
-﻿
-//TODO: Change to WerteBereich Def and WerteBereich Value
+﻿//TODO: Change to WerteBereich Def and WerteBereich Value
 namespace Help.Library
 {
   internal enum SystemSettings

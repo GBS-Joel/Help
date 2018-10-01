@@ -147,6 +147,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\MyXamlSchemaContext.cs" />
+    <Compile Include="Classes\NativeMethods.cs" />
+    <Compile Include="Classes\WM.cs" />
     <Compile Include="Controls\DashBoardListBoxItem.xaml.cs">
       <DependentUpon>DashBoardListBoxItem.xaml</DependentUpon>
     </Compile>

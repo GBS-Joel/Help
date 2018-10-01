@@ -120,6 +120,7 @@
     <Compile Include="Helper\WPFHelper.cs" />
     <Compile Include="Interface\IAllowNew.cs" />
     <Compile Include="Interface\IAutoStretch.cs" />
+    <Compile Include="Interface\ISingleInstanceApp.cs" />
     <Compile Include="Manager\ApplicationIconManager.cs" />
     <Compile Include="Manager\ChangeTrackerManager.cs" />
     <Compile Include="Manager\SaveManager.cs" />
