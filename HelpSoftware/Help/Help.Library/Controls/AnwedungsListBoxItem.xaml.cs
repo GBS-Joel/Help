@@ -15,7 +15,7 @@ namespace Help.Library
     {
       InitializeComponent();
       name.Text = Name;
-      MouseDoubleClick += ModuleListBoxItem_MouseDoubleClick; ;
+      MouseDoubleClick += ModuleListBoxItem_MouseDoubleClick;
       VerticalAlignment = VerticalAlignment.Stretch;
     }
 

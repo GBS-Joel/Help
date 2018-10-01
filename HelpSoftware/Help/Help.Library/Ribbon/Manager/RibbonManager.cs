@@ -55,7 +55,7 @@ namespace Help.Library
       {
         item.Groups.Add(g);
         item.Groups.Add(GetGroupBoxesFromTabPage(Def).FirstOrDefault());
-      };
+      }
       BaseRibbon.Tabs.Add(item);
     }
 
