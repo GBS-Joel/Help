@@ -1,9 +1,6 @@
-﻿using System;
+﻿using Help.EF;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Help.EF;
 
 namespace Help.Library
 {
@@ -11,17 +8,47 @@ namespace Help.Library
   {
     public override string GetName()
     {
-      throw new NotImplementedException();
+      return "SystemSettingsInstallDir";
     }
 
     public override WertebereichDef GetWertebereichDef()
     {
-      throw new NotImplementedException();
+      WertebereichDef def = new WertebereichDef()
+      {
+        AutomaticCreated = true,
+        Created = DateTime.Now,
+        DefaultValue = @"C:\Help\Log",
+        WerteBereichValueRanges = GetWerteBereichValueRanges(),
+        Name = GetName()
+      };
+      foreach (var item in GetWerteBereichValueRanges())
+      {
+        def.WerteBereichValueRanges.Add(item);
+      }
+      return def;
     }
 
-    public override List<WerteBereichValueRangeItem> GetWerteBereichValueRangeItems()
+    public List<WerteBereichValueRange> GetWerteBereichValueRanges()
     {
-      throw new NotImplementedException();
+      List<WerteBereichValueRange> range = new List<WerteBereichValueRange>();
+      WerteBereichValueRange wrange = new WerteBereichValueRange()
+      {
+        Type = WerteBereichValueRangeType.InList,
+        Name = GetName() + "Path",
+      };
+
+      WerteBereichValueRangeItem item = new WerteBereichValueRangeItem()
+      {
+        Created = DateTime.Now,
+        Type = WerteBereichValueRangeItemType.IsPath,
+        Value = @"C:\Help\Log",
+        ValueName = "ExamplePath"
+      };
+      HelpContext.Instance.WerteBereichValueRangeItems.Add(item);
+      wrange.WerteBereichValueRangeItems.Add(item);
+      HelpContext.Instance.WerteBereichValueRanges.Add(wrange);
+      range.Add(wrange);
+      return range;
     }
   }
 }

@@ -10,6 +10,8 @@ namespace Help.Library
     public static void RegisteredWerteBereichDefs()
     {
       NewWerteBereichDefs.Add(new ActivityActionWB());
+      NewWerteBereichDefs.Add(new SystemSettingsInstallDir());
+      NewWerteBereichDefs.Add(new SystemSettingAdminEMail());
     }
 
     public static void UdpateRegisteredWertebereichs()

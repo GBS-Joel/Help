@@ -19,11 +19,7 @@ namespace Help.Library
         Type = WerteBereichValueRangeType.InList
       };
       range.WerteBereichValueRangeItems = GetWerteBereichValueRangeItems();
-
-
-
       HelpContext.Instance.WerteBereichValueRanges.Add(range);
-
       WertebereichDef wertebereichDef = new WertebereichDef()
       {
         AutomaticCreated = true,
@@ -36,7 +32,7 @@ namespace Help.Library
       return wertebereichDef;
     }
 
-    public override List<WerteBereichValueRangeItem> GetWerteBereichValueRangeItems()
+    public List<WerteBereichValueRangeItem> GetWerteBereichValueRangeItems()
     {
       List<WerteBereichValueRangeItem> RangeItems = new List<WerteBereichValueRangeItem>();
       WerteBereichValueRangeItem itemupdate = new WerteBereichValueRangeItem()

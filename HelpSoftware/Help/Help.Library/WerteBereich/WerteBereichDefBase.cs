@@ -18,8 +18,6 @@ namespace Help.Library
 
     public abstract WertebereichDef GetWertebereichDef();
 
-    public abstract List<WerteBereichValueRangeItem> GetWerteBereichValueRangeItems();
-
     public void RegisterWerteBereich()
     {
       if (CheckIfAllreadyInDB())

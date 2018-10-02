@@ -14,5 +14,6 @@ namespace Help.EF
     Smaller = 4,
     SmallerOrSame = 5,
     Regex = 6,
+    IsPath = 7,
   }
 }

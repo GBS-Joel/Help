@@ -7,8 +7,6 @@ namespace Help.Library
   {
     WertebereichDef GetWertebereichDef();
 
-    List<WerteBereichValueRangeItem> GetWerteBereichValueRangeItems();
-
     bool CheckIfAllreadyInDB();
 
     string GetName();
