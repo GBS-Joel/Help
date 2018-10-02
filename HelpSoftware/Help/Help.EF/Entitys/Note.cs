@@ -13,16 +13,16 @@ namespace Help.EF
     public virtual DateTime Created { get; set; }
 
     [Timestamp]
-    public virtual byte[] TimeStamp { get; set; }
+    public virtual byte[ ] TimeStamp { get; set; }
 
     public string GetEntityName()
     {
-      throw new NotImplementedException();
+      return "Note";
     }
 
     public int GetID()
     {
-      throw new NotImplementedException();
+      return ID_Note;
     }
 
     public bool GetWriteHistoryEntry()

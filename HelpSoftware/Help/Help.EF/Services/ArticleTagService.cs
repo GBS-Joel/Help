@@ -17,7 +17,10 @@ namespace Help.EF
 
     public override ArticleTag GetEntityByID(int id)
     {
-      throw new NotImplementedException();
+      var qry = from a in HelpContext.Instance.ArticleTags
+                where a.ID_ArticleTag == id
+                select a;
+      return qry.FirstOrDefault();
     }
   }
 }

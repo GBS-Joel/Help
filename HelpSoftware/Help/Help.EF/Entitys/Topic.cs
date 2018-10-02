@@ -26,16 +26,16 @@ namespace Help.EF
     public virtual DateTime LastModified { get; set; }
 
     [Timestamp]
-    public byte[] TimeStamp { get; set; }
+    public byte[ ] TimeStamp { get; set; }
 
     public string GetEntityName()
     {
-      throw new NotImplementedException();
+      return "Topic";
     }
 
     public int GetID()
     {
-      throw new NotImplementedException();
+      return ID_Topic;
     }
 
     public bool GetWriteHistoryEntry()

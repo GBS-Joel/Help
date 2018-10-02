@@ -1,26 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Help.EF
 {
-  public class SystemSettingProvider : HelpBaseService<SystemSettingProvider>
+  public class SystemSettingProvider : HelpBaseService<SystemSetting>
   {
-    public SystemSettingProvider()
+    public override List<SystemSetting> GetAllEntities()
     {
-
+      var qry = from s in HelpContext.Instance.SystemSettings
+                select s;
+      return qry.ToList();
     }
 
-    public override List<SystemSettingProvider> GetAllEntities()
+    public override SystemSetting GetEntityByID(int id)
     {
-      throw new NotImplementedException();
-    }
-
-    public override SystemSettingProvider GetEntityByID(int id)
-    {
-      throw new NotImplementedException();
+      var qry = from s in HelpContext.Instance.SystemSettings
+                where s.ID_SystemSetting == id
+                select s;
+      return qry.FirstOrDefault();
     }
 
     public SystemSetting GetSystemSettingByName(string Name)
@@ -29,6 +26,6 @@ namespace Help.EF
                                    where s.Name == Name
                                    select s;
       return getsystemsettingbyName.FirstOrDefault();
-    }   
+    }
   }
 }

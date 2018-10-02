@@ -15,16 +15,16 @@ namespace Help.EF
     public int RequiredPermission { get; set; }
 
     [Timestamp]
-    public virtual byte[] TimeStamp { get; set; }
+    public virtual byte[ ] TimeStamp { get; set; }
 
     public string GetEntityName()
     {
-      throw new NotImplementedException();
+      return "LinkItem";
     }
 
     public int GetID()
     {
-      throw new NotImplementedException();
+      return ID_LinkItem;
     }
 
     public bool GetWriteHistoryEntry()

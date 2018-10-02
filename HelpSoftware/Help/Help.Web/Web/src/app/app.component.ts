@@ -1,14 +1,16 @@
-import { Component, OnInit } from "@angular/core";
-import { ResponsiveService } from "./services/responsive.service/responsive.service";
-import { AuthService } from "./services/auth.service/auth.service";
+import { Component, OnInit } from '@angular/core';
+import { ResponsiveService } from './services/responsive.service/responsive.service';
+import { AuthService } from './services/auth.service/auth.service';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"]
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
   isLoggedIn = false;
+
+  title = 'Help.Web';
 
   constructor(
     private responsiveService: ResponsiveService,
@@ -17,9 +19,9 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.responsiveService.getMobileStatus().subscribe(isMobile => {
       if (isMobile) {
-        console.log("Mobile device detected");
+        console.log('Mobile device detected');
       } else {
-        console.log("Desktop detected");
+        console.log('Desktop detected');
       }
     });
     this.onResize();
@@ -34,8 +36,6 @@ export class AppComponent implements OnInit {
   }
 
   Update() {
-    console.log("Focus");
+    console.log('Focus');
   }
-
-  title = "Help.Web";
 }

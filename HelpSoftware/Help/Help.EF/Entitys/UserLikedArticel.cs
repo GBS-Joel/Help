@@ -19,12 +19,12 @@ namespace Help.EF
 
     public string GetEntityName()
     {
-      throw new NotImplementedException();
+      return "UserLikedArticel";
     }
 
     public int GetID()
     {
-      throw new NotImplementedException();
+      return ID_UserLikedArticel;
     }
 
     public bool GetWriteHistoryEntry()

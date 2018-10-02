@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Linq;
 using System.Collections.Generic;
 
 namespace Help.EF
@@ -7,12 +7,17 @@ namespace Help.EF
   {
     public override List<BugReport> GetAllEntities()
     {
-      throw new NotImplementedException();
+      var qry = from r in HelpContext.Instance.BugReports
+                select r;
+      return qry.ToList();
     }
 
     public override BugReport GetEntityByID(int id)
     {
-      throw new NotImplementedException();
+      var qry = from r in HelpContext.Instance.BugReports
+                where r.ID_BugReport == id
+                select r;
+      return qry.First();
     }
   }
 }

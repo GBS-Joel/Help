@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Collections.Generic;
 
 namespace Help.EF
@@ -15,7 +14,10 @@ namespace Help.EF
 
     public override DashBoard GetEntityByID(int id)
     {
-      throw new NotImplementedException();
+      var qry = from d in HelpContext.Instance.DashBoards
+                where d.ID_DashBoard == id
+                select d;
+      return qry.FirstOrDefault();
     }
   }
 }

@@ -8,7 +8,8 @@ namespace Help.WebService.Controllers
   public class ArticleSearchController : ApiController
   {
     // GET: api/ArticleSearch
-    [EnableCors(origins: "http://localhost:4200", headers: "*", methods: "*")]
+    [HttpGet]
+    [Authorize]
     public string Get(string Suche)
     {
       if (!HelpContext.IsInitialized)

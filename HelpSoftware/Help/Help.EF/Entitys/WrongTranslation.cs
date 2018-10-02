@@ -23,7 +23,7 @@ namespace Help.EF
 
     public string GetEntityName()
     {
-      throw new NotImplementedException();
+      return "WrongTranslation";
     }
 
     public int GetID()

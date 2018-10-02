@@ -15,16 +15,16 @@ namespace Help.EF
     public virtual DateTime WatchedTime { get; set; }
 
     [Timestamp]
-    public byte[] TimeStamp { get; set; }
+    public byte[ ] TimeStamp { get; set; }
 
     public string GetEntityName()
     {
-      throw new NotImplementedException();
+      return "UserWatchArticle";
     }
 
     public int GetID()
     {
-      throw new NotImplementedException();
+      return ID_UserWatchArticle;
     }
 
     public bool GetWriteHistoryEntry()

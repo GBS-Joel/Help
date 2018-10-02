@@ -32,9 +32,7 @@ namespace Help.Library
       if (AppContext.IsAtRuntime) return;
     }
 
-    
-
-    public void LoadWerteBereichItems(string WB)
+    public void LoadItems(string WB)
     {
       var qry = from a in HelpContext.Instance.WertebereichDefs
                 where a.Name == WB

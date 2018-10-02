@@ -481,6 +481,24 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="T:Help.WebService.Controllers.ArticleController">
+            <summary>
+            This Controller is responsible for Accessing Articles
+            </summary>
+        </member>
+        <member name="M:Help.WebService.Controllers.ArticleController.Get(System.Int32)">
+            <summary>
+            Gets the Article from the Database without the Author
+            </summary>
+            <param name="ID">The ID of the Article</param>
+            <returns>JSON of the Article Found in the Databse without the Author</returns>
+        </member>
+        <member name="M:Help.WebService.Controllers.ArticleController.Post(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
         <member name="M:Help.WebService.Controllers.UserController.Get">
             <summary>
             This is a test

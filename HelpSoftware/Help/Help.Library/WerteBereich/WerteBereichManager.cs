@@ -13,11 +13,19 @@ namespace Help.Library
 
     private WerteBereichDefManager WerteBereichDefManager { get; set; }
 
+    public List<IWerteBereichDef> RegisteredWerteBereichDefs { get; set; }
+
     public WerteBereichManager()
     {
+      RegisteredWerteBereichDefs = new List<IWerteBereichDef>();
       WerteBereichValidator = new WerteBereichValidator();
       WerteBereichDefManager = new WerteBereichDefManager();
       var wb = GetWerteBereichByName("ActivityAction", "Update", WerteBereichValueDataType.text);
+    }
+
+    public void RegisterNewWerteBereichDef(IWerteBereichDef def)
+    {
+      RegisteredWerteBereichDefs.Add(def);
     }
 
     /*

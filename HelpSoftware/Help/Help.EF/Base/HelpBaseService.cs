@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace Help.EF
 {
@@ -14,12 +13,15 @@ namespace Help.EF
 
     public void DeleteEntity(T entity)
     {
-      throw new NotImplementedException();
+      HelpContext.Instance.DeleteEntity((IHelpEntity)entity);
     }
 
     public void DeleteEntity(List<T> entities)
     {
-      throw new NotImplementedException();
+      foreach (var item in entities)
+      {
+        HelpContext.Instance.DeleteEntity((IHelpEntity)item);
+      }
     }
 
     public abstract List<T> GetAllEntities();
@@ -28,12 +30,12 @@ namespace Help.EF
 
     public int Insert(T entity)
     {
-      throw new NotImplementedException();
+      return 0;
     }
 
     public void ReloadEntity(T entity)
     {
-      throw new NotImplementedException();
+      HelpContext.Instance.Entry((IHelpEntity)entity).Reload();
     }
 
     public virtual void UpdateCount()
@@ -43,12 +45,12 @@ namespace Help.EF
 
     public void UpdateEntity(T entity)
     {
-      throw new NotImplementedException();
+
     }
 
     T IHelpService<T>.GetEntityByID(int id)
     {
-      throw new NotImplementedException();
+      return default(T);
     }
   }
 }

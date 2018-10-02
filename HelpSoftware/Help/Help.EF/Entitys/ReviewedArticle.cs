@@ -17,16 +17,16 @@ namespace Help.EF
     public virtual string Comment { get; set; }
 
     [Timestamp]
-    public virtual byte[] TimeStamp { get; set; }
+    public virtual byte[ ] TimeStamp { get; set; }
 
     public string GetEntityName()
     {
-      throw new NotImplementedException();
+      return "ReviewedArticle";
     }
 
     public int GetID()
     {
-      throw new NotImplementedException();
+      return ID_ReviewedArticle;
     }
 
     public bool GetWriteHistoryEntry()

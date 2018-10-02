@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Help.EF
 {
@@ -10,12 +7,17 @@ namespace Help.EF
   {
     public override List<Booklet> GetAllEntities()
     {
-      throw new NotImplementedException();
+      var qry = from b in HelpContext.Instance.Booklets
+                select b;
+      return qry.ToList();
     }
 
     public override Booklet GetEntityByID(int id)
     {
-      throw new NotImplementedException();
+      var qry = from b in HelpContext.Instance.Booklets
+                where b.ID_Booklet == id
+                select b;
+      return qry.FirstOrDefault();
     }
   }
 }

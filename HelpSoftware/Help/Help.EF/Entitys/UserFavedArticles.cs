@@ -15,16 +15,16 @@ namespace Help.EF
     public virtual DateTime FavedTime { get; set; }
 
     [Timestamp]
-    public byte[] TimeStamp { get; set; }
+    public byte[ ] TimeStamp { get; set; }
 
     public string GetEntityName()
     {
-      throw new NotImplementedException();
+      return "UserFavedArticles";
     }
 
     public int GetID()
     {
-      throw new NotImplementedException();
+      return ID_UserFavedArticles;
     }
 
     public bool GetWriteHistoryEntry()

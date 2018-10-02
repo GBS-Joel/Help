@@ -15,16 +15,16 @@ namespace Help.EF
     public virtual bool IsPublic { get; set; }
 
     [Timestamp]
-    public virtual byte[] TimeStamp { get; set; }
+    public virtual byte[ ] TimeStamp { get; set; }
 
     public string GetEntityName()
     {
-      throw new NotImplementedException();
+      return "DashBoard";
     }
 
     public int GetID()
     {
-      throw new NotImplementedException();
+      return ID_DashBoard;
     }
 
     public bool GetWriteHistoryEntry()

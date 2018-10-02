@@ -1,21 +1,20 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Help.EF
 {
   public class Memo : IHelpEntity
   {
     [Timestamp]
-    public virtual byte[] TimeStamp { get; set; }
+    public virtual byte[ ] TimeStamp { get; set; }
 
     public string GetEntityName()
     {
-      throw new NotImplementedException();
+      return "Memo";
     }
 
     public int GetID()
     {
-      throw new NotImplementedException();
+      return 0;
     }
 
     public bool GetWriteHistoryEntry()

@@ -19,11 +19,11 @@ namespace Help.EF
     public virtual Chat Chat { get; set; }
 
     [Timestamp]
-    public virtual byte[] TimeStamp { get; set; }
+    public virtual byte[ ] TimeStamp { get; set; }
 
     public string GetEntityName()
     {
-      throw new NotImplementedException();
+      return "ChatMessage";
     }
 
     public int GetID()

@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Help.EF
 {
@@ -10,12 +7,17 @@ namespace Help.EF
   {
     public override List<LoginHistory> GetAllEntities()
     {
-      throw new NotImplementedException();
+      var qry = from l in HelpContext.Instance.LoginHistorys
+                select l;
+      return qry.ToList();
     }
 
     public override LoginHistory GetEntityByID(int id)
     {
-      throw new NotImplementedException();
+      var qry = from l in HelpContext.Instance.LoginHistorys
+                where l.ID_LoginHistory == id
+                select l;
+      return qry.FirstOrDefault();
     }
   }
 }

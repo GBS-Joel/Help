@@ -1,8 +1,8 @@
-import { Injectable } from "@angular/core";
-import { MatSnackBar } from "@angular/material";
+import { Injectable } from '@angular/core';
+import { MatSnackBar } from '@angular/material';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class MessageService {
   messages: string[] = [];
@@ -10,10 +10,10 @@ export class MessageService {
   constructor(public snackBar: MatSnackBar) {}
 
   add(message: string) {
-    // this.snackBar.open(message, null, { duration: 5000 });
+    this.snackBar.open(message, null, { duration: 5000 });
   }
 
   clear() {
-    //this.messages = [];
+    this.messages = [];
   }
 }

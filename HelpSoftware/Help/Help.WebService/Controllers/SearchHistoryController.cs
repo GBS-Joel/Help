@@ -10,7 +10,7 @@ namespace Help.WebService.Controllers
     // GET: api/SearchHistory
     public IEnumerable<string> Get()
     {
-      return new string[] { "value1", "value2" };
+      return new string[ ] { "value1", "value2" };
     }
 
     // GET: api/SearchHistory/5
@@ -23,7 +23,6 @@ namespace Help.WebService.Controllers
     public void Post(string Val)
     {
       var res = (SearchHistory)JSONSerializer.JSONToObject(Val, typeof(SearchHistory));
-      res.ID_SearchHistory = null;
       if (!HelpContext.IsInitialized)
         HelpContext.InitInstance();
       HelpContext.Instance.SearchHistories.Add(res);

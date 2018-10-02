@@ -22,16 +22,16 @@ namespace Help.EF
     public virtual string MailType { get; set; }
 
     [Timestamp]
-    public virtual byte[] TimeStamp { get; set; }
+    public virtual byte[ ] TimeStamp { get; set; }
 
     public string GetEntityName()
     {
-      throw new NotImplementedException();
+      return "MailActivity";
     }
 
     public int GetID()
     {
-      throw new NotImplementedException();
+      return ID_MailActivity;
     }
 
     public bool GetWriteHistoryEntry()

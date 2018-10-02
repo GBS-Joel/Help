@@ -46,7 +46,10 @@ namespace Help.EF
 
     public override Article GetEntityByID(int id)
     {
-      throw new NotImplementedException();
+      var qry = from a in HelpContext.Instance.Articles
+                where a.ID_Article == id
+                select a;
+      return qry.First();
     }
   }
 }

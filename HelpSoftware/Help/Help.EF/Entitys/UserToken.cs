@@ -15,16 +15,16 @@ namespace Help.EF
     public virtual string Token { get; set; }
 
     [Timestamp]
-    public byte[] TimeStamp { get; set; }
+    public byte[ ] TimeStamp { get; set; }
 
     public string GetEntityName()
     {
-      throw new NotImplementedException();
+      return "UserToken";
     }
 
     public int GetID()
     {
-      throw new NotImplementedException();
+      return ID_UserToken;
     }
 
     public bool GetWriteHistoryEntry()

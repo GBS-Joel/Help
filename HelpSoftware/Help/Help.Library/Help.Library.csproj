@@ -231,11 +231,16 @@
     <Compile Include="Translation\TranslationManager.cs" />
     <Compile Include="Exceptions\UserNotLoggedInException.cs" />
     <Compile Include="Settings\UserSettingsValidator.cs" />
+    <Compile Include="WerteBereich\IWerteBereichDef.cs" />
+    <Compile Include="WerteBereich\WerteBereichDefBase.cs" />
     <Compile Include="WerteBereich\WerteBereichDefManager.cs" />
+    <Compile Include="WerteBereich\WerteBereichDefs\SystemSettingsInstallDir.cs" />
+    <Compile Include="WerteBereich\WerteBereichDefs\WerteBereichDefRegisterer.cs" />
     <Compile Include="WerteBereich\WerteBereichDefValidator.cs" />
     <Compile Include="WerteBereich\WerteBereichManager.cs" />
     <Compile Include="Exceptions\WerteBereichNotFoundException.cs" />
     <Compile Include="WerteBereich\WerteBereichValidator.cs" />
+    <Compile Include="WerteBereich\WerteBereichDefs\ActivityActionWB.cs" />
     <Compile Include="WerteBereich\WerteBreichValueRange.cs" />
     <Compile Include="Manager\WindowManager.cs" />
     <Compile Include="Enum\WindowType.cs" />
