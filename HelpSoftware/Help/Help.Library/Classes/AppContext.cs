@@ -22,8 +22,9 @@ namespace Help.Library
       LoginHandlerInstance = new LoginHandler();
       SearchHelperInstance = new SearchHelper();
       IconManagerInstance.LoadBitMapImageFromName("Black_48x48_Delete");
-      WerteBereichManagerInstance = new WerteBereichManager();
+      //WerteBereichManagerInstance = new WerteBereichManager();
       HelpSettingsHandler = new HelpSettingsHandler();
+      ApplicationIconManager iconmanager = new ApplicationIconManager();
     }
 
     private static LinkManager _LinkManager { get; set; }

@@ -19,7 +19,8 @@ namespace Help.Server
         HelpContext.InitInstance();
         InactiveUserService.DoService();
         BugReportsService.DoService();
-        ImageService.DoService();
+        // ImageService.DoService();
+        NewsletterService.DoService();
         PrintLineDelimiter();
         Thread.Sleep(10000);
       }

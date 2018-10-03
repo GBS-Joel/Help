@@ -20,7 +20,7 @@ namespace Help.Library
 
     private ContentPresenter Presenter { get; set; }
 
-    private Window MainWindow { get; set; }
+    public Window MainWindow { get; set; }
 
     public WindowManager()
     {

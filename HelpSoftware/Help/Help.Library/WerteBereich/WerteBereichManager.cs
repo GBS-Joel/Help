@@ -17,10 +17,17 @@ namespace Help.Library
 
     public WerteBereichManager()
     {
+      RegisterWerteBereichs();
       RegisteredWerteBereichDefs = new List<IWerteBereichDef>();
       WerteBereichValidator = new WerteBereichValidator();
       WerteBereichDefManager = new WerteBereichDefManager();
       var wb = GetWerteBereichByName("ActivityAction", "Update", WerteBereichValueDataType.text);
+    }
+
+    public void RegisterWerteBereichs()
+    {
+      WerteBereichDefRegisterer.RegisteredWerteBereichDefs();
+      WerteBereichDefRegisterer.UdpateRegisteredWertebereichs();
     }
 
     public void RegisterNewWerteBereichDef(IWerteBereichDef def)
@@ -28,38 +35,10 @@ namespace Help.Library
       RegisteredWerteBereichDefs.Add(def);
     }
 
-    /*
-    public List<WerteBereich> GetWerteBereichValueByName(string Name)
+    public void GetWerteBereichDefByName(string Name)
     {
-      var qry = from h in HelpContext.Instance.WerteBereichs
-                where h.WertebereichDef.Name == Name
-                select h;
-      List<WerteBereich> lst = qry.ToList();
-      foreach (var item in lst)
-      {
-        WerteBereichValidator.ValidateWerteBereichValues(item);
-      }
-      return lst;
+
     }
-    */
-
-    //public WertebereichDef GetWertebereichDefByName(string Name)
-    //{
-    //  //var qry = from w in HelpContext.Instance.WertebereichDefs
-    //  //          where w.Name == Name
-    //  //          select w;
-    //  //WertebereichDef wertebereichDef = qry.FirstOrDefault();
-    //  //if (wertebereichDef != null)
-    //  //{
-    //  //  return wertebereichDef;
-    //  //}
-    //  //else
-    //  //{
-    //  //  AppContext.Logger.Warn("WerteBeichDef with Value " + Name + " Not Found!", "WerteBereichManager");
-    //  //  throw new WerteBereichNotFoundException(Name);
-    //  //}
-    //}
-
 
     //Example 
     //ActivityAction
@@ -97,3 +76,37 @@ namespace Help.Library
     }
   }
 }
+
+
+
+/*
+public List<WerteBereich> GetWerteBereichValueByName(string Name)
+{
+  var qry = from h in HelpContext.Instance.WerteBereichs
+            where h.WertebereichDef.Name == Name
+            select h;
+  List<WerteBereich> lst = qry.ToList();
+  foreach (var item in lst)
+  {
+    WerteBereichValidator.ValidateWerteBereichValues(item);
+  }
+  return lst;
+}
+*/
+
+//public WertebereichDef GetWertebereichDefByName(string Name)
+//{
+//  //var qry = from w in HelpContext.Instance.WertebereichDefs
+//  //          where w.Name == Name
+//  //          select w;
+//  //WertebereichDef wertebereichDef = qry.FirstOrDefault();
+//  //if (wertebereichDef != null)
+//  //{
+//  //  return wertebereichDef;
+//  //}
+//  //else
+//  //{
+//  //  AppContext.Logger.Warn("WerteBeichDef with Value " + Name + " Not Found!", "WerteBereichManager");
+//  //  throw new WerteBereichNotFoundException(Name);
+//  //}
+//}

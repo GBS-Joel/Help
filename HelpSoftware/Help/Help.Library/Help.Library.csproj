@@ -234,7 +234,9 @@
     <Compile Include="WerteBereich\IWerteBereichDef.cs" />
     <Compile Include="WerteBereich\WerteBereichDefBase.cs" />
     <Compile Include="WerteBereich\WerteBereichDefManager.cs" />
+    <Compile Include="WerteBereich\WerteBereichDefs\SystemSettingAdminEMail.cs" />
     <Compile Include="WerteBereich\WerteBereichDefs\SystemSettingsInstallDir.cs" />
+    <Compile Include="WerteBereich\WerteBereichDefs\SystemSettingSmtpHostWB.cs" />
     <Compile Include="WerteBereich\WerteBereichDefs\WerteBereichDefRegisterer.cs" />
     <Compile Include="WerteBereich\WerteBereichDefValidator.cs" />
     <Compile Include="WerteBereich\WerteBereichManager.cs" />

@@ -9,7 +9,6 @@ namespace Help.Library
 {
   public class CheckViewModel<T> : ICheckViewModel
   {
-    #region members
 
     private Type typeT = typeof(T);
     private Type typeV = typeof(T);
@@ -17,9 +16,6 @@ namespace Help.Library
     private UInt64[ ] intValues;
     private int itemCount;
     private bool isNullable = false;
-
-    #endregion
-
 
     public CheckViewModel()
     {
