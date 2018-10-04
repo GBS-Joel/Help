@@ -5,30 +5,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Help"
              xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
-             mc:Ignorable="d" Background="White">
+             mc:Ignorable="d" >
   <Grid>
     <Grid.ColumnDefinitions>
       <ColumnDefinition Width="0.5*"/>
       <ColumnDefinition Width="0.5*"/>
     </Grid.ColumnDefinitions>
     <Grid Grid.Column="0">
-      <Label VerticalAlignment="Center" HorizontalAlignment="Center" Content="Built for You" FontSize="26" 
-             FontWeight="Black" Foreground="Black"/>
+      <library:HelpLabel VerticalAlignment="Center" HorizontalAlignment="Center" Content="Built for You" FontSize="26" />
     </Grid>
     <Grid Grid.Column="1" VerticalAlignment="Center">
-      <Label Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Vorname" />
+      <library:HelpLabel Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Content="Vorname" />
       <TextBox Controls:TextBoxHelper.Watermark="Vorname" Controls:TextBoxHelper.ClearTextButton="True"  Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,0,0,0" x:Name="tbVorname" Text="{Binding Vorname}"/>
-      <Label Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,50,0,0" Content="Nachname" />
+      <library:HelpLabel Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,50,0,0" Content="Nachname" />
       <TextBox Controls:TextBoxHelper.Watermark="Nachname" Controls:TextBoxHelper.ClearTextButton="True" Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,50,0,0" x:Name="tbNachname" Text="{Binding Nachname}" />
-      <Label Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,100,0,0" Content="E-Mail" />
+      <library:HelpLabel Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,100,0,0" Content="E-Mail" />
       <TextBox Controls:TextBoxHelper.Watermark="E-Mail" Controls:TextBoxHelper.ClearTextButton="True" Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,100,0,0" x:Name="tbEMail"  Text="{Binding EMail}" />
-      <Label Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,150,0,0" Content="Username" />
+      <library:HelpLabel Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,150,0,0" Content="Username" />
       <TextBox Controls:TextBoxHelper.Watermark="Username" Controls:TextBoxHelper.ClearTextButton="True" Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,150,0,0" x:Name="tbUsername"  Text="{Binding Username}" />
-      <Label Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,200,0,0" Content="Password" />
+      <library:HelpLabel Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,200,0,0" Content="Password" />
       <TextBox Controls:TextBoxHelper.Watermark="Password" Controls:TextBoxHelper.ClearTextButton="True" Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,200,0,0" x:Name="tbPW1" Text="{Binding Password}" />
-      <Label Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,250,0,0" Content="Password" />
+      <library:HelpLabel Width="100" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,250,0,0" Content="Password" />
       <TextBox Controls:TextBoxHelper.Watermark="Repeat Password" Controls:TextBoxHelper.ClearTextButton="True" Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="100,250,0,0" x:Name="tbPW2"  Text="{Binding Password2}"/>
       <Button Controls:ControlsHelper.ContentCharacterCasing="Normal"  Width="100" Height="30" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="Registrate_Click" Content="Registrate" />
     </Grid>

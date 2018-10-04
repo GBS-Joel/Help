@@ -70,6 +70,7 @@ namespace Help.Library
       AppContext.IsLoggedIn = true;
       WriteLoginHistory(AppContext.LoggedInUser, Type);
       AppContext.HelpSettingsHandler.UserSettingsHandler.ValidateUserSettings(AppContext.LoggedInUser);
+      AppThemeHandler.UpdateAppTheme();
     }
 
     private Dictionary<string, string> ReadConfigFile(string ConfPath)

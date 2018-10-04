@@ -32,11 +32,25 @@ namespace Help.EF
 
     public UserSetting GetUserSettingFromName(string Name, int ID_User)
     {
+      EFLogger.EFLog("Getting UserSetting for User " + ID_User + " Name: " + Name);
       var qry = from u in HelpContext.Instance.UserSettings
                 where u.Setting.SettingName == Name
                 where u.User.ID_User == ID_User
                 select u;
-      return qry.FirstOrDefault();
+      var res = qry.FirstOrDefault();
+      if (res != null)
+      {
+        return res;
+      }
+      else
+      {
+        return null;
+      }
+    }
+
+    public UserSetting GetUserSettingFromName(string Name, User user)
+    {
+      return GetUserSettingFromName(Name, user.ID_User);
     }
   }
 }

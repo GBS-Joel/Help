@@ -12,7 +12,7 @@ namespace Help.Library
     {
       UserSettingsHandler = new UserSettingsHandler();
       UpdateSettings();
-      
+
     }
 
     private void UpdateSettings()
@@ -23,6 +23,7 @@ namespace Help.Library
       //-> switch // enable disable 1
       //3--> Send Email when a user likes your Article
       //4--> send EMail when a user favorites your article
+      //5--> Dark Theme on Window
       if (!CheckIfSettingExists("AppTheme"))
         CreateSetting("AppTheme", "1");
 
@@ -34,6 +35,9 @@ namespace Help.Library
 
       if (!CheckIfSettingExists("SendNotfificationOnArticleFavorited"))
         CreateSetting("SendNotfificationOnArticleFavorited", "1");
+
+      if (!CheckIfSettingExists("UseDarkTheme"))
+        CreateSetting("UseDarkTheme", "1");
     }
 
     public void CreateSettingsForUser(User u)
@@ -42,6 +46,7 @@ namespace Help.Library
       LoadSettingAndCreateSetting("RandomAppTheme", "1", u);
       LoadSettingAndCreateSetting("SendNotfificationOnArticleLiked", "1", u);
       LoadSettingAndCreateSetting("SendNotfificationOnArticleFavorited", "1", u);
+      LoadSettingAndCreateSetting("UseDarkTheme", "1", u);
     }
 
     public void LoadSettingAndCreateSetting(string Settingname, string val, User u)
@@ -93,8 +98,6 @@ namespace Help.Library
         return false;
       }
     }
-
-    
 
     public Setting GetSettingFromName(string Name)
     {

@@ -1,5 +1,6 @@
 ﻿using System.Windows.Controls;
 using System.Windows;
+using System.Windows.Media;
 
 namespace Help.Library
 {
@@ -10,6 +11,10 @@ namespace Help.Library
       VerticalAlignment = VerticalAlignment.Top;
       HorizontalAlignment = HorizontalAlignment.Left;
       FontSize = 16;
+      if (AppThemeHandler.UseDarkTheme)
+        Foreground = Brushes.White;
+      else
+        Foreground = Brushes.Black;
     }
   }
 }

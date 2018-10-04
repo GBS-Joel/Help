@@ -14,7 +14,7 @@ namespace Help.Library
     {
       VerticalAlignment = System.Windows.VerticalAlignment.Stretch;
       HorizontalAlignment = System.Windows.HorizontalAlignment.Stretch;
-      Background = (Brush)FindResource("MaterialDesignPaper");
+      Background = (Brush)FindResource("DarkBackgroundOne");
     }
 
     public event PropertyChangedEventHandler PropertyChanged;

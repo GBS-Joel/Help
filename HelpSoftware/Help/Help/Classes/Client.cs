@@ -70,7 +70,10 @@ namespace Help
       {
         AppContext.WindowManagerInstance.OpenNewWindow(new Registrate());
       }
+      AppThemeHandler.UpdateAppTheme();
     }
+
+   
 
     public void CreateNewOpenConnection()
     {

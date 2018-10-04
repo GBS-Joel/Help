@@ -7,5 +7,7 @@ namespace Help.EF
     public static Action<string> EFLoggerMethod { get; set; }
 
     public static void EFLog(string Message) => EFLoggerMethod?.Invoke(Message);
+
+    public static void EFWarn(string Message) => EFLoggerMethod?.Invoke(Message);
   }
 }

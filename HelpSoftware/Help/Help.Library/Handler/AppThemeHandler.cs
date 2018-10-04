@@ -3,24 +3,25 @@ using Help.EF;
 using System;
 using System.Linq;
 using System.Windows;
+using System.Windows.Media;
 
+//Handle Theme and Dark and Light Theme
 namespace Help.Library
 {
-  public class AppThemeHandler
+  public static class AppThemeHandler
   {
-    public static AppThemeHandler Instance { get; set; }
+    public static string AppColorTheme { get; set; }
 
-    public static void InitInstance()
+    public static bool UseDarkTheme { get; set; } = true;
+
+    public static void UpdateAppTheme()
     {
-      Instance = new AppThemeHandler();
-      Instance.GetRandomColor();
+      TryLoadAppTheme();
+      TryLoadBaseTheme();
+      UpdateAppThemes();
     }
 
-    public void SetAppColor()
-    {
-    }
-
-    public void TryLoadAppTheme()
+    private static void TryLoadAppTheme()
     {
       var qry = (from us in HelpContext.Instance.UserSettings
                  where us.User.ID_User == AppContext.LoggedInUser.ID_User
@@ -30,17 +31,52 @@ namespace Help.Library
       if (qry.FirstOrDefault() != null)
       {
         UserSetting s = qry.FirstOrDefault();
-        string theme = s.UserValue;
-        ChangeAppStyle(theme);
+        AppColorTheme = Enum.GetName(typeof(ApplicationThemes), Convert.ToInt32(s.UserValue));
       }
     }
 
-    public void ChangeAppStyle(string Theme)
+    private static void TryLoadBaseTheme()
     {
-      // ThemeManager.ChangeAppTheme(Application.Current, Theme);
+      var value = HelpService.GetService<UserSettingService>().GetUserSettingFromName("UseDarkTheme", AppContext.LoggedInUser.ID_User)?.UserValue;
+      if (value == "1")
+      {
+        UseDarkTheme = true;
+      }
+      else
+      {
+        UseDarkTheme = false;
+      }
     }
 
-    public void GetRandomColor()
+    private static void UpdateAppThemes()
+    {
+      UpdateBaseAppTheme();
+      ChangeAppStyle();
+    }
+
+    private static void UpdateBaseAppTheme()
+    {
+      if (UseDarkTheme)
+      {
+        Application.Current.Resources[ "DarkBackgroundOne" ] = (SolidColorBrush)(new BrushConverter().ConvertFrom("#303030"));
+      }
+      else
+      {
+        Application.Current.Resources[ "DarkBackgroundOne" ] = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFFFFF"));
+      }
+    }
+
+    public static void ChangeAppStyle()
+    {
+      if (UseDarkTheme)
+      {
+        ThemeManager.ChangeAppStyle(Application.Current, ThemeManager.GetAccent(AppColorTheme), ThemeManager.GetAppTheme("BaseDark"));
+      }
+      else
+        ThemeManager.ChangeAppStyle(Application.Current, ThemeManager.GetAccent(AppColorTheme), ThemeManager.GetAppTheme("BaseLight"));
+    }
+
+    public static void GetRandomColor()
     {
       Tuple<AppTheme, Accent> theme = ThemeManager.DetectAppStyle(Application.Current);
       Random r = new Random();

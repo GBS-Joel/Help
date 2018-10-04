@@ -7,7 +7,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:metro="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:ico="http://metro.mahapps.com/winfx/xaml/iconpacks"
-        Background="{DynamicResource MaterialDesignPaper}"
+        Background="{DynamicResource DarkBackgroundOne}"
         mc:Ignorable="d" >
   <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
     <Grid>
