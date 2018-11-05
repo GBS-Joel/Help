@@ -23,7 +23,7 @@
     "@angular/platform-browser": "6.1.9",
     "@angular/platform-browser-dynamic": "6.1.9",
     "@angular/router": "6.1.9",
-    "angular-calendar": "0.26.1",
+    "angular-calendar": "0.26.4",
     "angular-file-upload": "2.5.0",
     "core-js": "2.5.7",
     "moment": "2.22.2",
