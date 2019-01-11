@@ -35,7 +35,7 @@
     "ngx-chips": "1.9.8",
     "ngx-moment": "3.3.0",
     "typescript": "3.2.2",
-    "zone.js": "0.8.26"
+    "zone.js": "0.8.27"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.12.1",
