@@ -34,7 +34,7 @@
     "ng2-slider-component": "1.0.9",
     "ngx-chips": "1.9.8",
     "ngx-moment": "3.3.0",
-    "typescript": "3.2.2",
+    "typescript": "3.2.4",
     "zone.js": "0.8.28"
   },
   "devDependencies": {
